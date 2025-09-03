@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priyanshu's Portfolio</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div class="particles-container" id="particles-container"></div>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#name-section" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/priyanshusharma25" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="name-section" class="hero reveal">
+        <div class="hero-text">
+            <h1>Priyanshu Sharma</h1>
+            <p>Aspiring Software Engineer | C++ | Java | Web Developer</p>
+        </div>
+        <a href="Priyanshu_Sharma_Resume.pdf" class="resume-btn reveal" download>Download Resume</a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills reveal">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Languages:</strong> C, C++, Java</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Database:</strong> MySQL, Oracle</li>
+            <li><strong>Cloud Services:</strong> AWS (EC2, S3, RDS)</li>
+            <li><strong>Tools:</strong> VS Code, Git</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education reveal">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>B.Tech in Computer Science & Engineering</strong><br />
+                Graphic Era Hill University, Dehradun <br />
+                CGPA: 6.59 | 2021–2025
+            </li>
+            <li>
+                <strong>Diploma in Civil Engineering</strong><br />
+                IFTM University <br />
+                CGPA: 8.26 | 2018–2021
+            </li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects reveal">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Face Recognition Attendance System</h3>
+                <p><strong>Technology:</strong> Python, OpenCV</p>
+                <p><strong>Description:</strong> [Add description]</p>
+            </div>
+            <div class="project-card">
+                <h3>Fake News Detection</h3>
+                <p><strong>Technology:</strong> NLP, Scikit-learn</p>
+            </div>
+            <div class="project-card">
+                <h3>Sales Prediction using XGBoost</h3>
+                <p><strong>Technology:</strong> XGBoost, Pandas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications reveal">
+        <h2>Certifications</h2>
+        <ul>
+            <li>
+                <strong>AWS Academy Graduate – Cloud Architecting</strong><br />
+                <a href="https://www.credly.com/go/llUbqZ1j" target="_blank">Credly Badge</a>
+            </li>
+            <li>
+                <strong>Cloud Computing – Infosys & ICT Academy</strong><br />
+                <a href="https://www.credly.com/go/llUbqZ1j" target="_blank">Credly Badge</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Scroll animations & active nav -->
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - revealPoint) el.classList.add("active");
+            });
+        }
+
+        function highlightActiveNav() {
+            let currentSection = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 130;
+                if (pageYOffset >= sectionTop) currentSection = section.getAttribute("id");
+            });
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${currentSection}`) link.classList.add("active");
+            });
+        }
+
+        window.addEventListener("scroll", () => {
+            revealOnScroll();
+            highlightActiveNav();
+        });
+
+        window.addEventListener("load", revealOnScroll);
+    </script>
+
+    <!-- Particle animation -->
+    <script src="particles.js"></script> 
+
+</html>
