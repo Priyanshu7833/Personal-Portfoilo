@@ -1,3 +1,27 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / package manager stuff (if you add tooling later)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Temporary / archive files
+*.zip
+*.tar
+*.gz
+
