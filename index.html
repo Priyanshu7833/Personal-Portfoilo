@@ -21,6 +21,7 @@
     <header class="site-header">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="brand">Portfolio</div>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#education">Education</a></li>
@@ -44,9 +45,11 @@
                 <div class="avatar reveal" aria-hidden="true"></div>
                 <div class="hero-text reveal">
                     <h1 class="name">Priyanshu Sharma</h1>
-                    <p class="role tagline">Eager to apply my engineering skills in a dynamic organization, contribute
-                        to
-                        its success, and grow my problem-solving and technical expertise</p>
+                    <p class="role tagline">
+                        Eager to apply my engineering skills in a dynamic organization,
+                        contribute to its success, and grow my problem-solving and technical expertise
+                    </p>
+
                     <p class="role dynamic"><span id="typed">Aspiring Software Engineer</span></p>
                     <div class="hero-ctas">
                         <a class="btn" href="#projects">See Projects</a>
@@ -60,49 +63,68 @@
         <section id="education" class="section reveal">
             <h2>Education & Experience</h2>
             <div class="timeline stagger">
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+
+                <!-- B.Tech -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="timeline-content">
-                        <h3>B.Tech — Graphic Era Hill University</h3>
+                        <h3>B.Tech — Computer Science & Engineering </h3>
                         <time>2021 — 2025</time>
-                        <p>Computer Science & Engineering — CGPA: 6.59</p>
+                        <p>Graphic Era Hill University — CGPA: 6.59</p>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+
+                <!-- Diploma -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="timeline-content">
-                        <h3>Diploma — IFTM University</h3>
+                        <h3>Diploma — Civil Engineering</h3>
                         <time>2018 — 2021</time>
-                        <p>Diploma in Civil Engineering — CGPA: 8.26</p>
+                        <p>IFTM University — CGPA: 8.26</p>
                     </div>
                 </div>
+
+                <!-- 12th -->
                 <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
                     <div class="timeline-content">
                         <h3>12th - Nainital Convent School</h3>
                         <time>2018</time>
                         <p>Stream - Science | Board - CBSE </p>
                     </div>
                 </div>
+
+                <!-- 10th -->
                 <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
                     <div class="timeline-content">
                         <h3>10th - Nainital Convent School</h3>
                         <time>2016</time>
                         <p>Board - CBSE</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- Projects Timeline -->
+        <!-- Projects -->
         <section id="projects" class="section reveal">
             <h2>Projects</h2>
             <div class="timeline stagger">
 
                 <!-- Project 1 -->
                 <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <div class="timeline-content">
                         <h3>Face Recognition Attendance System</h3>
                         <time>2024</time>
@@ -115,7 +137,9 @@
 
                 <!-- Project 2 -->
                 <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <div class="timeline-content">
                         <h3>Library Management System</h3>
                         <p>This is a simple Library Management System I built in C++ to practice object-oriented
@@ -131,6 +155,7 @@
 
             </div>
         </section>
+
 
 
         <section id="skills" class="section reveal">
